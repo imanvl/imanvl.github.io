@@ -29,6 +29,30 @@
 		}
 	</script>
 
+<script>
+	function showBibtex(moretextid, moretextbtn) {
+		var moreText = document.getElementById(moretextid);
+		var btnText = document.getElementById(moretextbtn);
+
+		if (moreText.style.display === "none") {
+			btnText.innerHTML = " ... Hide bibtex";
+			moreText.style.display = "block";
+		} else {
+			btnText.innerHTML = " <br>Bibtex";
+			moreText.style.display = "none";
+		}
+	}
+</script>
+
+<!-- <script>
+	function unhide(divID) {
+		var item = document.getElementById(divID);
+		if (item) {
+			item.className = (item.className == 'hidden') ? 'unhidden' : 'hidden';
+		}
+	}
+</script> -->
+
 	<body class="is-preload">
 
 		<!-- Header -->
@@ -97,10 +121,9 @@
 							</header>
 
 							<footer>
-								<a href="#working-papers" class="button scrolly">Working Papers</a>
-								<a href="#published" class="button scrolly">Published</a>
-                                <a href="#various" class="button scrolly">Various</a>
-                                <!-- <a href="#published-entr2021" class="button scrolly">Various</a> -->
+								<a href="#working-papers"	class="button scrolly">Working Papers</a>
+								<a href="#published"		class="button scrolly">Published</a>
+                                <a href="#various" 			class="button scrolly">Various</a>
 							</footer>
 
 						</div>
@@ -115,12 +138,15 @@
 								<h2>Working Papers</h2>
 							</header>
 
+
+
 <h3 class="mb-0" id="norm">The ‘New Normal’ During Normal Times – Liquidity Regulation and Conventional Monetary Policy
 </h3>Joint with Sînziana Kroon, Clemens Bonner and Jan Wrampelmeyer in 2022 in R&R at <i>International Journal of
 	Central Banking</i>
 <p style="text-align:justify">What does the introduction of the LCR really do? To assess this you should look at a
-	period without all the confounding effects introduced by post-GFC policy responses <span id="more-norm"
-		style="display:none;">We analyze the impact of a requirement similar to the Basel III Liquidity Coverage Ratio
+	period without all the confounding effects introduced by post-GFC policy responses.  <span id="more-norm"
+		style="display:none;">
+				We analyze the impact of a requirement similar to the Basel III Liquidity Coverage Ratio
 		(LCR) on conventional monetary policy implementation. Combining unique data sets of Dutch banks from 2002 to
 		2005, we find that the introduction of the LCR impacts banks’ behaviour in open market operations. After the
 		introduction of the LCR, banks bid for higher volumes and pay higher interest rates for central bank funds. In
@@ -128,9 +154,19 @@
 		worsening of collateral quality pledged in open market operations. Thus, to correctly anticipate an open market
 		operation’s effect on interest rates, monetary policy requires central banks to consider not only the size of
 		the operation, but also how it impacts banks’ liquidity management and compliance with the LCR. (<a
-			href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3763715" target="_blank">Link</a>)</span><a
+			href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3763715" target="_blank">Link</a>)
+		</span>
+		<a
 		href="javascript:void(0);" onclick="readmoreless('more-norm','more-norm-btn')" id="more-norm-btn"><br>... Read
-		more</a></p>
+		more</a>
+		
+		<!-- <span id="bibtex-norm" style="display:none;">
+		bitex text
+		</span>
+		<a href="javascript:void(0);" onclick="showBibtex('bibtex-norm','bibtex-norm-btn')" id="bibtex-norm-btn"><br>Bibtex</a> -->
+	</p>
+
+
 <h3 class="mb-0" id="shsmrl">How banks respond to distress: Shifting risks in Europe's banking union</h3>Joint with Mark
 Mink and Rodney Ramcharan in 2020 in <i>De Nederlandsche Bank Working Paper</i>, No. 669<p style="text-align:justify">
 	Banks invest in all kinds of bonds. What drives these decisions? Is it possible that they aim to shift risks? <span
@@ -699,6 +735,6 @@ Joint with Ralph de Haas in 2004 in <i>Journal of Emerging Market Finance</i>,�
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+	
 	</body>
 </html>
